@@ -10,9 +10,6 @@ const appTransformer = (app, bucketType) => {
 
 exports.createPages = async ({ actions: { createPage } }) => {
   try {
-    const respDatetime = await axios.get(
-      `http://worldtimeapi.org/api/timezone/America/Vancouver`
-    )
     const respMainBucket = await axios.get(
       `https://api.github.com/repos/ScoopInstaller/Main/contents/bucket`
     )
@@ -29,7 +26,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
         allApps: mainApps.concat(extraApps),
         mainCount: mainApps.length,
         extraCount: extraApps.length,
-        lastUpdatedAt: new Date(respDatetime.data.datetime),
+        lastUpdatedAt: new Date().toISOString(),
       },
     })
   } catch (error) {
