@@ -13,8 +13,9 @@ const Span = styled.span`
 `
 
 export default ({ pageContext: { allApps, mainCount, extraCount, lastUpdatedAt } }) => (
-  <div>
+  <div style={{ margin: `3rem auto`, maxWidth: 640 }}>
     <Header />
+    <h1 style={{textAlign: `center`}}>Scoop Buckets Search</h1>
     <div><a href="https://github.com/ScoopInstaller/Main">Main Bucket</a>{mainCount}</div>
     <div><a href="https://github.com/lukesampson/scoop-extras">Extra Bucket</a>{extraCount}</div>
     <div>
