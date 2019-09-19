@@ -17,7 +17,7 @@ Thanks
 * Github Action (on schedule hook with Netlify)
 * [JS Search](https://github.com/bvaughn/js-search)
 
-There are other buckets available: [Scoop wiki](https://github.com/lukesampson/scoop/wiki/Buckets). I may make other buckets available on the website.
+There are other buckets available: [Scoop wiki](https://github.com/lukesampson/scoop/wiki/Buckets). I may make other buckets available on the website in the future.
 
 ### Local Dev
 `yarn install`
