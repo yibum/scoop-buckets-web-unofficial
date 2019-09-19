@@ -4,16 +4,6 @@ import "../main.scss"
 export default () => (
   <footer className="footer has-background-white">
     <div className="content has-text-centered">
-      {/* <div
-    style={{
-      textAlign: "center",
-      color: "#8c8c8c",
-      position: "fixed",
-      left: 0,
-      width: "100%",
-      bottom: 20,
-    }}
-  > */}
       <span className="span-space-horizontal-around span-text-vertical-adjust">
         Made with
       </span>
@@ -39,6 +29,18 @@ export default () => (
           alt="Netlify Status"
           src="https://api.netlify.com/api/v1/badges/965df306-a386-4e0b-9351-ee2bdb712857/deploy-status"
         ></img>
+      </span>
+      <span className="is-size-3">&middot;</span>
+      <span className="span-space-horizontal-around">
+        <a href="https://ko-fi.com/J3J113VYZ" rel="noopener noreferrer" target="_blank">
+          <img
+            height="21"
+            style={{border:"0px", height:"21px"}}
+            src="https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2"
+            border="0"
+            alt="Buy Me a Coffee at ko-fi.com"
+          />
+        </a>
       </span>
     </div>
   </footer>
