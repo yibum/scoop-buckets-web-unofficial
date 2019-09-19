@@ -16,7 +16,7 @@ export default ({
       Scoop Buckets Search
     </h1>
     <p className="has-text-centered is-size-5">
-      Is this app in{" "}
+      Is that app in{" "}
       <a href="https://scoop.sh/" target="_blank" rel="noopener noreferrer">
         Scoop
       </a>{" "}
