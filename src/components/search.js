@@ -63,7 +63,7 @@ class Search extends React.PureComponent {
     const queryResults = searchQuery === "" ? this.randomPicks() : searchResults
     return (
       <React.Fragment>
-        <div className="has-text-centered" style={{ marginTop: "5rem" }}>
+        <div className="has-text-centered" style={{ marginTop: "3rem" }}>
           <form onSubmit={this.handleSubmit}>
             <div style={{ margin: "0 auto" }}>
               <input
@@ -77,31 +77,62 @@ class Search extends React.PureComponent {
             </div>
           </form>
         </div>
-        <div className="container" style={{ marginTop: "5px" }}>
-          <div className="columns">
-            <div className="column is-4 is-offset-1 has-text-centered">
+        <div
+          className="container"
+          style={{ marginTop: "5px", maxWidth: "480px" }}
+        >
+          <div className="level">
+            <div className="level-item has-text-centered">
               {searchQuery === "" ? `Random Picks` : `Search Result`}
             </div>
-            <div className="column has-text-centered">
-              Main:
-              <span className="is-size-6 span-space-horizontal-around">
-                {searchQuery === "" ? 1 : this.state.mainCount}
-              </span>
+            <div className="level-item has-text-centered">
+              <div>
+                <p className="heading">Main</p>
+                <p className="title">
+                  {searchQuery === "" ? 1 : this.state.mainCount}
+                </p>
+              </div>
             </div>
-            <div className="column">
-              Extra:
-              <span className="is-size-6 span-space-horizontal-around">
-                {searchQuery === "" ? 1 : this.state.extraCount}
-              </span>
+            <div className="level-item has-text-centered">
+              <div>
+                <p className="heading">Extra</p>
+                <p className="title">
+                  {searchQuery === "" ? 1 : this.state.extraCount}
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <ul>
-          {queryResults.map(app => {
-            return <li key={app.name}>{app.name}</li>
-          })}
-        </ul>
+        {queryResults.map(app => {
+          return (
+            <div className="box">
+              <div className="level">
+                <div className="level-left">
+                  <div className="level-item has-text-left">{app.name}</div>
+                </div>
+                <div className="level-right">
+                  <div className="level-item">
+                    <a className="button is-link is-outlined" href="{app.url}">
+                      Check bucket
+                    </a>
+                  </div>
+                  <div className="level-item">
+                    {app.bucket === "main" ? (
+                      <span className="tag is-primary is-medium">
+                        <span className="is-size-6">{app.bucket}</span>
+                      </span>
+                    ) : (
+                      <span className="tag is-info is-medium">
+                        <span className="is-size-6">{app.bucket}</span>
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
+        })}
       </React.Fragment>
     )
   }

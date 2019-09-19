@@ -23,9 +23,9 @@ export default ({
       buckets? <br />A simple web tool to <strike>search</strike> filter out
       apps in Scoop buckets.
     </p>
-    <div className="container" style={{ marginTop: "1rem" }}>
+    <div className="container" style={{ marginTop: "1rem", maxWidtg: "480px" }}>
       <div className="columns">
-        <div className="column has-text-right">
+        <div className="column has-text-centered">
           <a href="https://github.com/ScoopInstaller/Main">
             <span className="icon">
               <i className="fab fa-github"></i>
@@ -36,7 +36,7 @@ export default ({
             <span className="is-size-6">{mainCount}</span>
           </span>
         </div>
-        <div className="column has-text-left">
+        <div className="column has-text-centered">
           <a href="https://github.com/lukesampson/scoop-extras">
             <span className="icon">
               <i className="fab fa-github"></i>
@@ -48,7 +48,7 @@ export default ({
           </span>
         </div>
       </div>
-      <div className="has-text-centered" style={{ marginTop: "-1.5rem" }}>
+      <div className="has-text-centered">
         <strong>Last updated at:</strong>{" "}
         <Moment format="MMMM Do YYYY, HH:mm">{lastUpdatedAt}</Moment>
         {" | "}
