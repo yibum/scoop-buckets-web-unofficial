@@ -1,6 +1,8 @@
 import React from "react"
 import * as JsSearch from "js-search"
 
+import "../main.scss"
+
 class Search extends React.PureComponent {
   constructor(props) {
     super(props)
@@ -11,7 +13,7 @@ class Search extends React.PureComponent {
       mainCount: 0,
       extraCount: 0,
       mainFullList: this.bucketFilter(props.apps, "main"),
-      extraFullList: this.bucketFilter(props.apps, "extra")
+      extraFullList: this.bucketFilter(props.apps, "extra"),
     }
   }
 
@@ -61,23 +63,40 @@ class Search extends React.PureComponent {
     const queryResults = searchQuery === "" ? this.randomPicks() : searchResults
     return (
       <React.Fragment>
-        <div>
+        <div className="has-text-centered" style={{ marginTop: "5rem" }}>
           <form onSubmit={this.handleSubmit}>
             <div style={{ margin: "0 auto" }}>
               <input
+                className="input is-info is-medium"
+                type="text"
                 id="search"
                 value={searchQuery}
                 onChange={this.searchApps}
-                style={{ margin: "0 auto", width: "400px" }}
+                style={{ margin: "0 auto", width: "480px" }}
               />
             </div>
           </form>
         </div>
-        <div>
-          {searchQuery === "" ? `Random Picks` : `Search Result`}
-          <span>{`Main: ${searchQuery === "" ? 1 : this.state.mainCount}`}</span>
-          <span>{`Extra: ${searchQuery === "" ? 1 : this.state.extraCount}`}</span>
+        <div className="container" style={{ marginTop: "5px" }}>
+          <div className="columns">
+            <div className="column is-4 is-offset-1 has-text-centered">
+              {searchQuery === "" ? `Random Picks` : `Search Result`}
+            </div>
+            <div className="column has-text-centered">
+              Main:
+              <span className="is-size-6 span-space-horizontal-around">
+                {searchQuery === "" ? 1 : this.state.mainCount}
+              </span>
+            </div>
+            <div className="column">
+              Extra:
+              <span className="is-size-6 span-space-horizontal-around">
+                {searchQuery === "" ? 1 : this.state.extraCount}
+              </span>
+            </div>
+          </div>
         </div>
+
         <ul>
           {queryResults.map(app => {
             return <li key={app.name}>{app.name}</li>
