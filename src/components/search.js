@@ -113,7 +113,7 @@ class Search extends React.PureComponent {
                 </div>
                 <div className="level-right">
                   <div className="level-item">
-                    <a className="button is-link is-outlined" href="{app.url}">
+                    <a className="button is-link is-outlined" href={app.url}>
                       Check bucket
                     </a>
                   </div>
