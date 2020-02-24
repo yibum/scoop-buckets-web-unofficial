@@ -1,5 +1,5 @@
 import React from "react"
-import * as JsSearch from "js-search"
+import Fuse from "fuse.js"
 
 import "../main.scss"
 
@@ -26,10 +26,16 @@ class Search extends React.PureComponent {
   }
 
   initSearchEngine = () => {
-    const engine = new JsSearch.Search("name")
-    engine.indexStrategy = new JsSearch.AllSubstringsIndexStrategy()
-    engine.addIndex("name")
-    engine.addDocuments(this.props.apps)
+    const options = {
+      shouldSort: true,
+      threshold: 0.6,
+      location: 0,
+      distance: 100,
+      maxPatternLength: 32,
+      minMatchCharLength: 1,
+      keys: ["name"]
+    };
+    const engine = new Fuse(this.props.apps, options);
     this.setState({ engine: engine })
   }
 
@@ -56,6 +62,36 @@ class Search extends React.PureComponent {
       Math.floor(Math.random() * this.state.extraFullList.length)
     ]
     return [mainPick, extraPick]
+  }
+
+  renderResults(queryResults) {
+    return (queryResults.map(app => (
+        <div className="box">
+          <div className="level">
+            <div className="level-left">
+              <div className="level-item has-text-left">{app.name}</div>
+            </div>
+            <div className="level-right">
+              <div className="level-item">
+                <a className="button is-link is-outlined" href={app.url}>
+                  Check bucket
+                </a>
+              </div>
+              <div className="level-item">
+                {app.bucket === "main" ? (
+                  <span className="tag is-primary is-medium">
+                    <span className="is-size-6">{app.bucket}</span>
+                  </span>
+                ) : (
+                  <span className="tag is-info is-medium">
+                    <span className="is-size-6">{app.bucket}</span>
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )))
   }
 
   render() {
@@ -103,36 +139,7 @@ class Search extends React.PureComponent {
             </div>
           </div>
         </div>
-
-        {queryResults.map(app => {
-          return (
-            <div className="box">
-              <div className="level">
-                <div className="level-left">
-                  <div className="level-item has-text-left">{app.name}</div>
-                </div>
-                <div className="level-right">
-                  <div className="level-item">
-                    <a className="button is-link is-outlined" href={app.url}>
-                      Check bucket
-                    </a>
-                  </div>
-                  <div className="level-item">
-                    {app.bucket === "main" ? (
-                      <span className="tag is-primary is-medium">
-                        <span className="is-size-6">{app.bucket}</span>
-                      </span>
-                    ) : (
-                      <span className="tag is-info is-medium">
-                        <span className="is-size-6">{app.bucket}</span>
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )
-        })}
+        {this.renderResults(queryResults)}
       </React.Fragment>
     )
   }
