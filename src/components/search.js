@@ -1,5 +1,6 @@
 import React from "react"
 import Fuse from "fuse.js"
+import LazyLoad from "react-lazyload"
 
 import "../main.scss"
 
@@ -63,9 +64,16 @@ class Search extends React.PureComponent {
     ]
     return [mainPick, extraPick]
   }
-
+  loading = () => {
+    return (
+    <div className="box">
+      <h5>Loading...</h5>
+    </div>
+    )
+  }
   renderResults(queryResults) {
     return (queryResults.map(app => (
+      <LazyLoad offset={100} placeholder={this.loading()}>
         <div className="box">
           <div className="level">
             <div className="level-left">
@@ -91,6 +99,7 @@ class Search extends React.PureComponent {
             </div>
           </div>
         </div>
+      </LazyLoad>
       )))
   }
 
