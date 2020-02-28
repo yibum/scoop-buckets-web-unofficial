@@ -9,7 +9,7 @@ A simple web tool to ~~search~~ filter out apps in Scoop buckets (Main + Extra).
 ### More Info?
 Typically one can search an app in Scoop by `scoop search <app-name>`, but it is sometimes slow on my local machine.
 
-This website syncs all available apps from "well known" buckets,  Main and Exta, every hour and pushes it to Netlify.
+This website syncs all available apps from "well known" buckets,  Main and Exta, every a few hours and pushes it to Netlify.
 
 Thanks
 * [Scoop](https://scoop.sh)
