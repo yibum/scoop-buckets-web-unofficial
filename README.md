@@ -28,3 +28,5 @@ and
 
 `gatsby develop`
 
+### Posts
+[中文](http://localhost:1313/posts/2020/03/17/netlify-scoop-search-deployment/)
