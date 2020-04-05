@@ -1,7 +1,12 @@
-## Scoop Buckets Web (Unofficial)
+## Scoop Buckets Web (Unofficial) - GatsbyJS
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/965df306-a386-4e0b-9351-ee2bdb712857/deploy-status)](https://scoop.airbrain.app)
 <a href='https://ko-fi.com/J3J113VYZ' target='_blank'><img height='26' style='border:0px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+**Important:**
+This branch is a legacy implementation using GatsbyJS.
+The Github Actions is disabled for this branch.
+Please check the master branch for a more efficient version using Rust.
 
 Is that app in [Scoop](https://scoop.sh) buckets? 
 A simple web tool to ~~search~~ filter out apps in Scoop buckets (Main + Extra).
