@@ -23,7 +23,7 @@ export default ({
       buckets? <br />A simple web tool to <strike>search</strike> filter out
       apps in Scoop buckets.
     </p>
-    <div className="container" style={{ marginTop: "1rem", maxWidtg: "480px" }}>
+    <div className="container" style={{ marginTop: "1rem", maxWidth: "480px" }}>
       <div className="columns">
         <div className="column has-text-centered">
           <a href="https://github.com/ScoopInstaller/Main">
