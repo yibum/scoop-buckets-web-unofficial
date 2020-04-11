@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Scoop Buckets Search">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search in Scoop Buckets</title>
+  <link rel="apple-touch-icon" sizes="180x180" href={{ get_url(path="apple-touch-icon.png") }} />
+  <link rel="icon" type="image/png" sizes="32x32" href={{ get_url(path="favicon-32x32.png") }} />
+  <link rel="icon" type="image/png" sizes="16x16" href={{ get_url(path="favicon-16x16.png") }} />
+  <link rel="manifest" href={{ get_url(path="site.webmanifest") }} />
+  <link rel="stylesheet" type="text/css" href={{ get_url(path="css/bulma.min.css") }}>
+  <link rel="stylesheet" type="text/css" href={{ get_url(path="main.css") }}>
+  <script src={{ get_url(path="js/main.js") }}></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+
+  {% block extrahead%}
+  {% endblock %}
+</head>
+
+<body>
+<div style="margin-left: auto; margin-right: auto; margin-top:0; margin-bottom: 2rem; max-width: 640px">
+  {% block content %}
+  {% endblock %}
+  {% include 'footer.html' %}
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148395444-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148395444-1');
+</script>
+
+</body>
+
+</html>

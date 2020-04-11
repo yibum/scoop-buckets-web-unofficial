@@ -14,19 +14,15 @@ This website syncs all available apps from "well known" buckets,  Main and Exta,
 Thanks
 * [Scoop](https://scoop.sh)
 * [Netlify](https://https://www.netlify.com/)
-* [GatsbyJS](https://www.gatsbyjs.org/)
 * [Bulma](https://bulma.io/)
 * Github Action (on schedule hook with Netlify)
-* [JS Search](https://github.com/bvaughn/js-search)
 
 There are other buckets available: [Scoop wiki](https://github.com/lukesampson/scoop/wiki/Buckets). I may make other buckets available on the website in the future.
 
+There is a legacy GatsbyJS implementation in [gatsbyjs branch](https://github.com/yibum/scoop-buckets-web-netlify/tree/gatsbyjs)
+
 ### Local Development
-`yarn install`
-
-and
-
-`gatsby develop`
+`zola serve`
 
 ### Posts
 [中文](https://blog.yibu.org/posts/2020/03/17/netlify-scoop-search-deployment/) | [EN](https://blog.yibu.org/en/posts/2020/03/17/netlify-scoop-search-deployment/)
