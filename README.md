@@ -14,6 +14,7 @@ This website syncs all available apps from "well known" buckets,  Main and Exta,
 Thanks
 * [Scoop](https://scoop.sh)
 * [Netlify](https://https://www.netlify.com/)
+* [Zola](https://github.com/getzola/zola)
 * [Bulma](https://bulma.io/)
 * Github Action (on schedule hook with Netlify)
 
