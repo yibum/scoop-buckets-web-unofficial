@@ -26,4 +26,4 @@ There is a legacy GatsbyJS implementation in [gatsbyjs branch](https://github.co
 `zola serve`
 
 ### Posts
-[中文](https://blog.yibu.org/posts/2020/03/17/netlify-scoop-search-deployment/) | [EN](https://blog.yibu.org/en/posts/2020/03/17/netlify-scoop-search-deployment/)
+[中文](https://blog.yibu.org/posts/2020/04/11/netlify-scoop-search-deployment-rust-zola/) | [EN](https://blog.yibu.org/en/posts/2020/04/11/netlify-scoop-search-deployment-rust-zola/)
