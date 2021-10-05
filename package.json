@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/demoslam/scoop-buckets-web-netlify#readme",
   "devDependencies": {
-    "atomic-algolia": "^0.3.17",
-    "node-fetch": "^2.6.1"
+    "atomic-algolia": "^0.3.19",
+    "node-fetch": "^3.0.0"
   },
   "dependencies": {}
 }
