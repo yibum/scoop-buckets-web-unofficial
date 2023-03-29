@@ -21,5 +21,6 @@
     "atomic-algolia": "^0.3.19",
     "node-fetch": "^3.2.10"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "type": "module"
 }
