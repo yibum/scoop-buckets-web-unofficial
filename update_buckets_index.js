@@ -15,7 +15,7 @@ async function fetchData() {
     const respMainApps = await respMainBucket.json();
     const mainApps = await respMainApps.map(app => appTransformer(app, 'main'));
 
-    const respExtraBucket = await fetch('https://api.github.com/repos/lukesampson/scoop-extras/contents/bucket');
+    const respExtraBucket = await fetch('https://api.github.com/repos/ScoopInstaller/Extras/contents/bucket');
     const respExtraApps = await respExtraBucket.json();
     const extraApps = await respExtraApps.map(app => appTransformer(app, 'extra'));
 
