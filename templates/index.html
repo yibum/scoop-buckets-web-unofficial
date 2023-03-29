@@ -2,7 +2,7 @@
 
 {% block content %}
 {% set main_apps = load_data(url="https://api.github.com/repos/ScoopInstaller/Main/contents/bucket", format="json") %}
-{% set extra_apps = load_data(url="https://api.github.com/repos/lukesampson/scoop-extras/contents/bucket", format="json") %}
+{% set extra_apps = load_data(url="https://api.github.com/repos/ScoopInstaller/Extras/contents/bucket", format="json") %}
 <h1 class="has-text-centered has-text-weight-bold is-family-primary is-size-2">
   Scoop Buckets Search
 </h1>
@@ -28,7 +28,7 @@
       </span>
     </div>
     <div class="column has-text-centered">
-      <a href="https://github.com/lukesampson/scoop-extras">
+      <a href="https://github.com/ScoopInstaller/Extras">
         <span class="icon">
           <i class="fab fa-github"></i>
         </span>
